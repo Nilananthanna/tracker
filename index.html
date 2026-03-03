@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Intelligence System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💼 Financial Intelligence System</h1>
+
+    <!-- Summary -->
+    <div class="summary">
+        <div class="card">Income <span id="income">0</span></div>
+        <div class="card">Expense <span id="expense">0</span></div>
+        <div class="card">Balance <span id="balance">0</span></div>
+        <div class="card">Savings <span id="savings">0</span></div>
+    </div>
+
+    <!-- Intelligence -->
+    <div class="intelligence">
+        <div class="card">Health Score <span id="healthScore">0</span></div>
+        <div class="card">Survival Days <span id="survivalDays">0</span></div>
+        <div class="card">Forecast End Balance <span id="forecast">0</span></div>
+    </div>
+
+    <!-- Add Transaction -->
+    <h2>Add Transaction</h2>
+    <div class="form">
+        <input id="desc" placeholder="Description">
+        <input id="amount" type="number" placeholder="Amount">
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <input id="date" type="date">
+        <button id="addBtn">Add</button>
+    </div>
+
+    <ul id="transactionList"></ul>
+
+    <!-- EMI -->
+    <h2>EMI Manager</h2>
+    <div class="form">
+        <input id="loanName" placeholder="Loan Name">
+        <input id="emiAmount" type="number" placeholder="EMI Amount">
+        <input id="emiDate" type="date">
+        <button id="emiBtn">Add EMI</button>
+    </div>
+    <ul id="emiList"></ul>
+
+    <!-- Goals -->
+    <h2>Goals</h2>
+    <div class="form">
+        <input id="goalName" placeholder="Goal Name">
+        <input id="goalTarget" type="number" placeholder="Target Amount">
+        <button id="goalBtn">Add Goal</button>
+    </div>
+    <ul id="goalList"></ul>
+
+</div>
+<div class="card">
+    <h2>🧾 Bills & Subscriptions</h2>
+
+    <input type="text" id="billName" placeholder="Bill Name (Electricity, Netflix)">
+    <input type="number" id="billAmount" placeholder="Amount">
+    <input type="date" id="billDate">
+    
+    <select id="billType">
+        <option value="bill">Utility Bill</option>
+        <option value="ott">OTT Subscription</option>
+    </select>
+
+    <label style="margin-top:10px; display:block;">
+        <input type="checkbox" id="billAutopay"> Enable Autopay
+    </label>
+
+    <button class="btn-primary" onclick="addBill()">Add</button>
+
+    <div id="billList"></div>
+</div>
+
+<div id="notification"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
